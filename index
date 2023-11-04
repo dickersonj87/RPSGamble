@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RPS Gamble</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>RPS Gamble</h1>
+    <h3>The game is simple. Start with 10 coins and wager 1, 2, or 3 coins on your way to 30 coins. You lose if you
+      reach 0. Good Luck!</h3>
+    <p id="result"></p>
+    <p id="score"></p>
+    <p id="amount"></p>
+    <div id="buttons">
+      <button onclick="play(1)">Rock</button>
+      <button onclick="play(2)">Paper</button>
+      <button onclick="play(3)">Scissors</button>
+    </div>
+    <div id="wager">
+      <button onclick="setWager(1)">Gamble 1</button>
+      <button onclick="setWager(2)">Gamble 2</button>
+      <button onclick="setWager(3)">Gamble 3</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
