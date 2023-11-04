@@ -1,4 +1,4 @@
-Rock, Paper, Scissors Gambling Game
+#Rock, Paper, Scissors Gambling Game
 Welcome to the Rock, Paper, Scissors Gambling Game repository! This is a fun and challenging game implemented in JavaScript, where you start with 10 coins and aim to reach 30 coins through strategic choices in the classic Rock, Paper, Scissors game.
 
 Game Overview
