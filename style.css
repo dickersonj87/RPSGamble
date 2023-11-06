@@ -1,0 +1,76 @@
+@font-face {
+  font-family: dowHereAgain;
+  src: url(font/JustMeAgainDownHere-Regular.ttf);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #161A20;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-color: gray;
+  border-radius: 20px;
+}
+
+#container {
+  max-width: 4000px;
+  margin: 0 auto;
+}
+
+button {
+  margin: 5px;
+}
+
+#wager {
+  margin-top: 20px;
+}
+
+#result {
+  font-weight: bold;
+  color: #DB002F;
+  text-align: center;
+  font-family: dowHereAgain;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#score {
+  margin-top: 20px;
+  color: #FFE39C;
+  text-align: center;
+  font-family: dowHereAgain;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h3 {
+  color: #FFE39C;
+  text-align: center;
+  font-family: dowHereAgain;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  color: #FFE39C;
+  text-align: center;
+  font-family: dowHereAgain;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  background-color: transparent;
+  outline-style: none;
+  width: 221.1;
+  height: 221.1;
+}
