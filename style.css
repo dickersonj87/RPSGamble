@@ -14,16 +14,15 @@ body {
   text-align: center;
   border-color: gray;
   border-radius: 20px;
+  overflow-x: hidden; /* Careful with this */
 }
 
 #container {
   max-width: 4000px;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding: 0 50px; /* Adjust the second value to increase the left and right padding */
 }
 
-button {
-  margin: 5px;
-}
 
 #wager {
   margin-top: 20px;
@@ -56,6 +55,7 @@ h3 {
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
+  /* padding: 0 100px; */
 }
 
 h1 {
@@ -71,6 +71,93 @@ h1 {
 button {
   background-color: transparent;
   outline-style: none;
-  width: 221.1;
-  height: 221.1;
+  margin: 5px;
+  /* width: 221.1;
+  height: 221.1; */
+}
+.button-container {
+  display: flex;
+  flex-direction: row; /* default value, can be omitted */
+  justify-content: center;
+  align-items: center;
+}
+
+.handsymbols, .handsymbols img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+}
+
+
+.coins, .coins img  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+/***************
+MEDIA QUERIES - For mobile responsiveness
+***************/
+
+@media screen and (max-width: 600px) {
+  /* Styles for screens 600px and smaller */
+  h1 {
+    font-size: 70px;
+  }
+  h3 {
+    padding: 0 25px;
+    /* margin: 15px; */
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  div#wager.button-container {
+    flex-direction: row !important;
+  }
+  
+
+  .handsymbols, .handsymbols img {
+    width: 200px;
+    height: 200px;
+  }
+  .coins, .coins img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for screens between 601px and 1024px */
+  /* Styles for screens 600px and smaller */
+  h3 {
+    padding: 0 75px;
+    /* margin: 15px; */
+  }
+  
+  .button-container {
+    flex-direction: row;
+  }
+
+  .handsymbols, .handsymbols img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .coins, .coins img  {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Styles for screens 1025px and larger */
 }
