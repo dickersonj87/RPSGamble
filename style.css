@@ -55,7 +55,7 @@ h3 {
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  /* padding: 0 100px; */
+  margin-top: 10px;
 }
 
 h1 {
@@ -66,12 +66,15 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 button {
   background-color: transparent;
   outline-style: none;
   margin: 5px;
+  border: none;
   /* width: 221.1;
   height: 221.1; */
 }
@@ -80,6 +83,10 @@ button {
   flex-direction: row; /* default value, can be omitted */
   justify-content: center;
   align-items: center;
+}
+.selected {
+  border: 2px solid #DB002F; 
+  box-shadow: 0 0 10px #DB002F; 
 }
 
 .handsymbols, .handsymbols img {
@@ -100,7 +107,11 @@ button {
   height: 100px;
 }
 
-
+#playerSelection, #computerSelection {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
 
 /***************
 MEDIA QUERIES - For mobile responsiveness
