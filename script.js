@@ -5,12 +5,45 @@ let roundResult = '';
 
 const choices = ['rock', 'paper', 'scissors']; // Map numbers to choices
 
+// Added to hide white img boxes before the game starts. -Alex 11/07/2023
+window.onload = function() {
+  var playerSelection = document.querySelector('#playerSelection');
+  var computerSelection = document.querySelector('#computerSelection');
+
+  if (!playerSelection.getAttribute('src')) {
+    playerSelection.classList.add('hidden');
+  }
+
+  if (!computerSelection.getAttribute('src')) {
+    computerSelection.classList.add('hidden');
+  }
+
+  // Create a new MutationObserver instance
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      // If the 'src' attribute has changed, remove the 'hidden' class
+      if (mutation.attributeName === 'src') {
+        mutation.target.classList.remove('hidden');
+      }
+    });
+  });
+
+  // Start observing the 'src' attribute for both images
+  observer.observe(playerSelection, { attributes: true, attributeFilter: ['src'] });
+  observer.observe(computerSelection, { attributes: true, attributeFilter: ['src'] });
+}
+
+// Updated to hide white img boxes before the game starts. -Alex 11/07/2023
 function showSelections(playerSelection, computerSelection) {
-  const playerImage = document.getElementById('playerSelection');
-  const computerImage = document.getElementById('computerSelection');
+  const playerImage = document.querySelector('#playerSelection');
+  const computerImage = document.querySelector('#computerSelection');
 
   playerImage.src = images[choices[playerSelection - 1]];
   computerImage.src = images[choices[computerSelection - 1]];
+
+  // Remove the 'hidden' class from the images
+  playerImage.classList.remove('hidden');
+  computerImage.classList.remove('hidden');
 }
 
 // Updates score and checks if game is over

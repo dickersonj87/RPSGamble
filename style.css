@@ -3,6 +3,25 @@
   src: url(font/JustMeAgainDownHere-Regular.ttf);
 }
 
+/* Keyframe Animations */
+
+@keyframes glow {
+  0% {
+    border-color: #DB002F;
+    box-shadow: 0 0 10px #DB002F;
+  }
+  50% {
+    border-color: #FF5733;
+    box-shadow: 0 0 20px #FF5733, 0 0 30px #FF5733, 0 0 40px #FF5733;
+  }
+  100% {
+    border-color: #DB002F;
+    box-shadow: 0 0 10px #DB002F;
+  }
+}
+
+/* End Keyframe Animations*/
+
 html {
   height: 100%;
   width: 100%;
@@ -17,10 +36,15 @@ body {
   overflow-x: hidden; /* Careful with this */
 }
 
+#playerSelection.hidden, #computerSelection.hidden {
+  width: 0;
+  height: 0;
+}
+
 #container {
   max-width: 4000px;
   margin: 10px auto;
-  padding: 0 50px; /* Adjust the second value to increase the left and right padding */
+  padding: 0 50px 50px; /* Adjust the second value to increase the left and right padding */
 }
 
 
@@ -86,8 +110,15 @@ button {
 }
 .selected {
   border: 2px solid #DB002F; 
-  box-shadow: 0 0 10px #DB002F; 
+  border-radius: 50%;
+  box-shadow: 0 0 10px #DB002F;
+  animation: glow 2s ease-in-out infinite;
+  transition: all 5s ease-in-out;
 }
+
+/* .glow {
+  animation: glow 2s ease-in-out infinite;
+} */
 
 .handsymbols, .handsymbols img {
   display: flex;
@@ -103,6 +134,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
   width: 100px;
   height: 100px;
 }
